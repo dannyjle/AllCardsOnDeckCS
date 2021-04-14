@@ -12,7 +12,7 @@ namespace AllCardsOnDeckCS
             var cards = new List<string>() { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
             var suits = new List<string>() { "Spades", "Clubs", "Diamonds", "Hearts" };
 
-            var deck = new List<String>();
+            var deck = new List<string>();
 
             for (var d = 0; d < cards.Count; d++)
             {
