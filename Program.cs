@@ -55,7 +55,11 @@ namespace AllCardsOnDeckCS
                 Console.WriteLine($"{all}");
             }
 
+            Console.WriteLine();
 
+            Console.WriteLine($"Want two random cards drawn..... voila! Here's {deck[0]} and {deck[1]}");
+
+            Console.WriteLine();
         }
     }
 }
