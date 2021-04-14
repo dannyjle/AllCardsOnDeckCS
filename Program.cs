@@ -12,19 +12,19 @@ namespace AllCardsOnDeckCS
             var cards = new List<string>() { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
             var suits = new List<string>() { "Spades", "Clubs", "Diamonds", "Hearts" };
 
-            var deckList = new List<String>();
+            var deck = new List<String>();
 
             for (var d = 0; d < cards.Count; d++)
             {
                 for (var b = 0; b < suits.Count; b++)
                 {
                     var allCards = ($"{cards[d]} of {suits[b]}");
-                    deckList.Add(allCards);
+                    deck.Add(allCards);
                 }
 
             }
 
-            foreach (var all in deckList)
+            foreach (var all in deck)
 
             {
                 Console.WriteLine($"{all}");
@@ -34,21 +34,22 @@ namespace AllCardsOnDeckCS
             Console.WriteLine();
 
 
-            var numberOfCards = cards.Count;
+            var numberOfCards = deck.Count;
 
             for (var rightIndex = numberOfCards - 1; rightIndex >= 0; rightIndex--)
             {
                 var leftIndex = new Random().Next(0, rightIndex);
+                // Placeholder for rightcard
+                var rightCard = deck[rightIndex];
+                // Placeholder for leftcard
+                var leftCard = deck[leftIndex];
 
-                var rightCard = cards[leftIndex];
-
-                cards[rightIndex] = cards[leftIndex];
-
-                cards[leftIndex] = rightCard;
+                deck[leftIndex] = rightCard;
+                deck[rightIndex] = leftCard;
 
             }
 
-            foreach (var all in cards)
+            foreach (var all in deck)
 
             {
                 Console.WriteLine($"{all}");
