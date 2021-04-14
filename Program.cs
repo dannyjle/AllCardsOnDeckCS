@@ -11,7 +11,7 @@ namespace AllCardsOnDeckCS
 
             var cards = new List<string>() { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
 
-            var numberOfCardsInList = cards.Count * 4;
+            var numberOfCardsInList = cards.Count;
 
             var aceCard = cards[0];
 
@@ -40,12 +40,26 @@ namespace AllCardsOnDeckCS
             var kingCard = cards[12];
 
 
-            Console.WriteLine($"There are {numberOfCardsInList} cards in my deck!");
 
 
+            var suits = new List<string>() { "Spades", "Clubs", "Diamonds", "Hearts" };
 
+            var numberOfSuitsInList = suits.Count;
 
+            var spadeCard = suits[0];
 
+            var clubsCard = suits[1];
+
+            var diamondsCards = suits[2];
+
+            var heartsCards = suits[3];
+
+            for (var deck = 0; deck < cards.Count; deck++)
+            {
+                Console.WriteLine($"Your card is {cards.Count}!");
+                for (var deck = 0; deck < suits.Count; deck++)
+                    Console.WriteLine($"Your card is {suits.Count}!");
+            }
 
 
 
